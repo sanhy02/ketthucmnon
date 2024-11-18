@@ -1,4 +1,4 @@
-<%-- 
+<%--
     Document   : list.jsp
     Created on : Sep 15, 2023, 8:14:39 AM
     Author     : KHOACNTT
@@ -24,10 +24,10 @@
 <div class="container" id="main-content">
     <div class="row">
         <div class="col-sm-3">
-            <jsp:include page="shared/category.jsp" />             
+            <jsp:include page="shared/category.jsp" />            
         </div>
         <div class="col-sm-9">
-            <div class="row">     
+            <div class="row">    
                 <%
                      DecimalFormat ftm = new DecimalFormat("#,##0");
                     int masp = request.getParameter("maloai") == null ? 1 : Integer.parseInt(request.getParameter("maloai"));
@@ -48,7 +48,7 @@
                             <%=x.getTensp()%>
                         </div>
                         <div class="card-body">
-                            <img class="card-img" src="assets/images/products/<%=x.getHinh()%>" alt="Card image cap">                         
+                            <img class="card-img" src="assets/images/products/<%=x.getHinh()%>" alt="Card image cap">                        
                         </div>
                         <div class="card-footer">
                             <div class="row">
@@ -66,7 +66,7 @@
                     }
 }
                 %>
-            </div>                       
+            </div>                      
         </div>
 
     </div>
@@ -74,4 +74,4 @@
 
 </div><!-- /.container -->
 <!--nhung noi dung footer.jsp-->
-<jsp:include page="shared/footer.jsp" />   
+<jsp:include page="shared/footer.jsp" />  

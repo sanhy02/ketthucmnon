@@ -4,16 +4,13 @@
  */
 package controller;
 
-import dao.SanPhamDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import model.SanPham;
 
 /**
  *
@@ -21,16 +18,6 @@ import model.SanPham;
  */
 @WebServlet(name = "HomeServlet", urlPatterns = {"/HomeServlet"})
 public class HomeServlet extends HttpServlet {
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        try {
-            SanPhamDAO spDAO = new SanPhamDAO();
-            List<SanPham> sanPhamList = spDAO.getAll();
-            request.setAttribute("sanPhamList", sanPhamList);
-            request.getRequestDispatcher("view/home.jsp").forward(request, response);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
